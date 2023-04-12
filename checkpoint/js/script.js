@@ -32,12 +32,12 @@ form.addEventListener('submit',(event) => {
         return;
     }
     //verifica se o email esta vazio
+    
     // if(email.value === ""  || !isEmailValid(email.value)){
     //     alert("Por favor, preencha seu email" );
     //     return;
     // }
-
-    // se tiver preenchido enviar
+  // se tiver preenchido enviar
   
     addNote();
     form.reset();
