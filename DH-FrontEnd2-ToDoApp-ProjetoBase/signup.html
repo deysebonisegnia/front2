@@ -1,60 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do App</title>
-  <link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon.ico">
-  <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
-  <link rel="stylesheet" href="styles/acesso.css">
-  
+    <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
+    <link rel="stylesheet" href="styles/acesso.css" />
+  </head>
 
-</head>
-
-<body>
-  <div class="left">
-    <img src="./assets/pessoa-signup.png" alt="pessoa-login" />
-  </div>
-
-  <form>
-    <div class="form-header">
-      <p>To-Do App</p>
+  <body>
+    <div class="left">
+      <img src="./assets/pessoa-signup.png" alt="pessoa-login" />
     </div>
 
-    <label>
-      Nome:
-      <input class="username"type="text">
-    </label>
-    <label>
-      Sobrenome:
-      <input class="username" type="text">
-    </label>
-    <label>
-      Email:
-      <input id="email"type="email">
-    </label>
-    <label>
-      Senha:
-      <input  id="password"type="password">
-    </label>
-    <label>
-      Repetir senha:
-      <input  id="password2"type="password">
-    </label>
+    <form>
+      <div class="form-header">
+        <p>To-Do App</p>
+      </div>
 
-    <button type="submit" id="criarConta">Criar conta</button>
-    <div class="ingressar">
-      <a href="index.html">Já possui conta? Acesse aqui</a>
-    </div>
-  </form>
-  <!-- ---------------------- lógica aplicada no registro -------------------- -->
-  
-  <script src="js/index.js"></script>
-  <script src="./js/signup.js"></script>
-  <script src="js/validacoes.js"></script>
-  
-</body>
+      <label>
+        Nome:
+        <input class="username" type="text" />
+      </label>
+      <label>
+        Sobrenome:
+        <input class="username" type="text" />
+      </label>
+      <label>
+        Email:
+        <input id="email" type="email" />
+      </label>
+      <label>
+        Senha:
+        <input id="password" type="password" />
+      </label>
+      <label>
+        Repetir senha:
+        <input id="password2" type="password" />
+      </label>
 
+      <button type="submit" id="criarConta">Criar conta</button>
+      <div class="ingressar">
+        <a href="index.html">Já possui conta? Acesse aqui</a>
+      </div>
+    </form>
+    <!-- ---------------------- lógica aplicada no registro -------------------- -->
+
+    <script src="js/index.js"></script>
+    <script src="./js/signup.js"></script>
+    <script src="js/validacoes.js"></script>
+  </body>
 </html>

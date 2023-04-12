@@ -8,7 +8,7 @@ let campoEmailLoginNormalizado;
 let campoSenhaLoginNormalizado;
 
 //Desabilita o botão de acessar ao iniciar a página
-botaoAcessarLogin.setAttribute("disabled", true);
+botaoAcessarLogin.setAttribute("disabled", false);
 botaoAcessarLogin.innerText = "Bloqueado";
 
 let emailValidacoesOk = false;
@@ -21,7 +21,7 @@ const loginUsuario = {
   password: "",
 };
 
-botaoAcessarLogin.addEventListener("submit", function (evento) {
+botaoAcessarLogin.addEventListener("click", function (evento) {
   //Verifica se ambos os campos estão preenchidos, normalizados e validados
   if (validaTelaDeLogin()) {
     evento.preventDefault();
@@ -58,7 +58,7 @@ botaoAcessarLogin.addEventListener("submit", function (evento) {
 
     /// Utilizando Promisses
     //Chamando a API
-    exibeLoader();
+  
     fetch(`${apiBaseUrl()}/users/login`, configuracoesRequisicao)
       .then((response) => {
         /* Verifica status de sucesso na execução da promisse */
@@ -73,12 +73,12 @@ botaoAcessarLogin.addEventListener("submit", function (evento) {
         console.log(resposta);
         // Chama função ao obter sucesso no login
         loginSucesso(resposta.jwt);
-        ocultaLoader();
+       
       })
       .catch((error) => {
         // Chama função ao obter algum erro no login
         loginErro(error.status);
-        ocultaLoader();
+      
       });
 
     //  Ao obter o sucesso, recebe o json (token JWT) do usuário
@@ -127,10 +127,10 @@ function resetaValidacaoLoginErro() {
 }
 
 campoEmailLogin.addEventListener("keyup", function () {
-  let inputEmailValidacao = document.getElementById("inputEmailValidacao");
+  let inputEmailValidacao = document.getElementById("inputEmail");
   campoEmailLogin.style.border = `1px solid #E42323BF`;
 
-  elementoSmallErro(inputEmailValidacao);
+  elementoSmallErro(inputEmail);
 
   let emailEValido = validaEmailRecebido(campoEmailLogin.value);
 

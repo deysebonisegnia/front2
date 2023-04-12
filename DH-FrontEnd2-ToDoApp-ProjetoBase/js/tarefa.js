@@ -1,6 +1,7 @@
 let jwt;
 let tarefasPendentesDom = document.querySelector(".tarefas-pendentes");
 let tarefasTerminadas = document.querySelector(".tarefas-terminadas");
+let finalizarTarefa = document.querySelector("#closeApp");
 
 onload = () => {
   jwt = sessionStorage.getItem("jwt");
@@ -68,7 +69,7 @@ async function buscaUsuarioNaApiAssincrono() {
     console.log(dados.firstName);
     renderizaNomeUsuario(dados);
   } catch (error) {
-    console.log(erro);
+    console.log(error);
   }
 }
 
@@ -261,8 +262,12 @@ function retornarTarefa(id) {
     .then((response) => response.json())
     .then((response) => {
       let voltarElemento = document.getElementById(`tarefa-terminada-${id}`);
-      location.reload();
+      windon.location.reload();
     }).catch;
-}
+} 
+function logout() {
+  sessionStorage.removeItem('jwt');
+  window.location.href = './index.html'; 
+  };
 
 

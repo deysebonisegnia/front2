@@ -1,3 +1,4 @@
+
 function retiraEspacosDeUmValorInformado(valorRecebido) {
     return valorRecebido.trim();
   }
@@ -23,10 +24,20 @@ function retiraEspacosDeUmValorInformado(valorRecebido) {
   
   /// Estilização customizada do elemento <small>
   function elementoSmallErro(elementoRecebido) {
-    elementoRecebido.style.color = "#E42323BF";
+    elementoRecebido.style.color = "rgb(116, 116, 116)";
     elementoRecebido.style.fontSize = "8";
     elementoRecebido.style.fontWeight = "bold";
   }
+  function senhaValidacoesOk(password) {
+    // Define a regular expression for the password pattern
+    const pattern = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
+  
+    // Test the password against the pattern and return the result
+    return pattern.test(password);
+  } 
+  const password = campoSenhaLogin.value;
+  const isValid = senhaValidacoesOk(password);
+  console.log(isValid); // true
   function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);

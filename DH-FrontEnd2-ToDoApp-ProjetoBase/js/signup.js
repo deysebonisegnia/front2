@@ -8,7 +8,7 @@ const button = document.getElementById('criarConta');
 form.addEventListener('submit', e => {
     e.preventDefault();
 
-    if ( validateInputs() == setSuccess){
+    if ( validateInputs() == true){
         window.location.href = "index.html";
        
       
@@ -75,4 +75,6 @@ const validateInputs = () => {
     } else {
         setSuccess(password2);
     }
+
+
 };
